@@ -1,0 +1,44 @@
+body{
+    background-image: url("https://i.imgur.com/S54uBf7.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+#pic {
+    height: 10%;
+    width: 10%;
+}
+
+header {
+    text-align: center;
+    font-size: 40px;
+    color: white;
+}
+
+#first {
+    color: white;
+    grid-column: 1 / 2;
+    text-align: center;
+
+}
+
+#second {
+    color: white;
+    grid-column: 2 / 3;
+    text-align: center;
+
+}
+
+#third {
+    color: white;
+    grid-column: 4 / 5;
+    text-align: center;
+}
+
+
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-gap: 10px;
+    padding: 10px;
+  }
