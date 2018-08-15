@@ -8,7 +8,14 @@
 <p>Burgers Left to Devour:</p>
 <ul>
   {{#each burgers}}
-    {{#unless devoured}}
+    {{#unless this.devoured}}
+    <ul>
+        {{this.name}}
+        <form action="/{{this.name}}?_method=PUT" method="POST">
+		<input type="hidden" name="devoured" value="true">
+		<button id="buttonStyle" type="submit">Devour!</button>
+		</form>
+        </ul>
     {{/unless}}
   {{/each}}
 </ul>
@@ -16,13 +23,13 @@
 
 <div class="grid-item" id="second">
 <p>Add a Burger</p>
-<form class="create-form">
+<form class="create-form" action="/" method="POST">
 
   <div class="form-group">
     <label for="ca">Burger Name:</label>
     <input type="text" id="ca" name="name">
 
-  <button type="submit">Add Burger</button>
+  <button id="buttonStyle" type="submit">Add Burger</button>
 </form>
 </div>
 </div>
@@ -32,7 +39,10 @@
 
 <ul>
   {{#each burgers}}
-    {{#if devoured}}
+    {{#if this.devoured}}
+    <ul>
+        {{this.name}}
+    </ul>
     {{/if}}
   {{/each}}
 </ul>
