@@ -11,7 +11,7 @@
     {{#unless this.devoured}}
     <ul>
         {{this.name}}
-        <form action="/{{this.name}}?_method=PUT" method="POST">
+        <form action="/{{this.id}}?_method=PUT" method="POST">
 		<input type="hidden" name="devoured" value="true">
 		<button id="buttonStyle" type="submit">Devour!</button>
 		</form>

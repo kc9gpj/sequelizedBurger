@@ -24,22 +24,20 @@ router.get("/", function(req, res) {
     });
   });
   
-  router.put(":id", function(req, res) {
+  router.put("/:id", function(req, res) {
     var condition = "id = " + req.params.id;
   
     console.log("condition", condition);
   
-    burgers.update({
+    burger.update({
       devoured: req.body.devoured
     }, condition, function() {
-        res.redirect("/");
-      });
+      res.redirect("/");
     });
-
+  });
  
 });
 
 // Export routes for server.js to use.
 module.exports = router;
-
 
