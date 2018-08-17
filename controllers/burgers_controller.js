@@ -12,6 +12,7 @@ router.get("/", function(req, res) {
     console.log(hbsObject);
     res.render("index", hbsObject);
   });
+});
 
   router.post("/", function(req, res) {
     burgers.create([
@@ -35,8 +36,7 @@ router.get("/", function(req, res) {
       res.redirect("/");
     });
   });
- 
-});
+
 
 // Export routes for server.js to use.
 module.exports = router;

@@ -62,6 +62,8 @@ header {
     
   }
 
+ 
+
   @media screen and (max-width: 40em) {
     #first {
       grid-gap: 2px;
