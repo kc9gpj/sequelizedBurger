@@ -29,7 +29,7 @@ router.get("/", function(req, res) {
   
     console.log("condition", condition);
   
-    burger.update({
+    burgers.update({
       devoured: req.body.devoured
     }, condition, function() {
       res.redirect("/");
