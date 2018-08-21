@@ -1,4 +1,6 @@
-USE  r8zcigqlsnjw96ld;
+-- USE  r8zcigqlsnjw96ld;
+
+USE burgers_db;
 
 CREATE TABLE burgers
 (
